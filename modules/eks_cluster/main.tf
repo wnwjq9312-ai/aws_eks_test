@@ -136,7 +136,7 @@ resource "aws_network_interface" "NAT_ENI" {
 # NAT Instance
 resource "aws_instance" "NAT_Instance" {
   ami           = "ami-00295862c013bede0"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   depends_on    = [aws_network_interface.NAT_ENI]
 
   network_interface {
